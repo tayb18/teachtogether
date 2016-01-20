@@ -18,7 +18,7 @@ Through this app, teachers will be able to form networks where they can collabor
 
 
 ## ERD
-<a href="">Click Me!</a>
+<a href="https://github.com/tayb18/teachtogether/blob/master/erd.md">Click Me!</a>
 
 
 ## Wire Frames
