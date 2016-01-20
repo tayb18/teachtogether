@@ -14,11 +14,11 @@ I plan to create Teach Together to make it even easier for teachers to work toge
 Through this app, teachers will be able to form networks where they can collaborate on the creation of units and lesson plans together in an efficient and convenient manner, leading to a fair and uniform distribution of knowledge to all students in a school.
 
 ## User Stories
-<a href="">Click Me!</a>
+<a href="https://github.com/tayb18/teachtogether/blob/master/userstories.md">Click Me!</a>
 
 
 ## ERD
-<a href="">Click Me!</a>
+<a href="https://github.com/tayb18/teachtogether/blob/master/erd.md">Click Me!</a>
 
 
 ## Wire Frames
