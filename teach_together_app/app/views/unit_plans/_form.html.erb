@@ -1,0 +1,57 @@
+<%= form_for @unitplan, url: {action: 'create'} do |f| %>
+  <%= f.hidden_field(:user_id, :value => @userid) %>
+
+  <%= f.label(:title, "Title: ") %>
+  <%= f.text_field(:title) %><br/><br/>
+
+  <%= f.label(:author, "Author: ") %>
+  <%= f.text_field(:author) %><br/><br/>
+
+  <%= f.label(:grade, "Grade: ") %>
+  <%= f.text_field(:grade) %><br/><br/>
+
+  <%= f.label(:subject, "Subject: ") %>
+  <%= f.text_field(:subject) %><br/><br/>
+
+  <%= f.label(:start, "Start Date: ") %>
+  <%= f.text_field(:start) %><br/><br/>
+
+  <%= f.label(:ends, "End Date: ") %>
+  <%= f.text_field(:ends) %><br/><br/>
+
+  <%= f.label(:description, "Description: ") %>
+  <%= f.text_field(:description) %><br/><br/>
+
+  <%= f.label(:big_idea, "Big Ideas: ") %>
+  <%= f.text_field(:big_idea) %><br/><br/>
+
+  <%= f.label(:essential_question, "Essential Questions: ") %>
+  <%= f.text_field(:essential_question) %><br/><br/>
+
+  <%= f.label(:standard, "Standards: ") %>
+  <%= f.text_field(:standard) %><br/><br/>
+
+  <%= f.label(:swbat, "Objectives (Students will be able to...): ") %>
+  <%= f.text_field(:swbat) %><br/><br/>
+
+  <%= f.label(:formal_assessment, "Formal Assessments: ") %>
+  <%= f.text_field(:formal_assessment) %><br/><br/>
+
+  <%= f.label(:informal_assessment, "Informal Assessments: ") %>
+  <%= f.text_field(:informal_assessment) %><br/><br/>
+
+  <%= f.label(:key_vocabulary, "Key Vocabulary: ") %>
+  <%= f.text_field(:key_vocabulary) %><br/><br/>
+
+  <%= f.label(:material, "Materials: ") %>
+  <%= f.text_field(:material) %><br/><br/>
+
+  <p>Make this Unit Plan: </p>
+  <%= f.radio_button(:is_public?, true) %>
+  <%= f.label(:is_public?, "Public}") %>
+  <%= f.radio_button(:is_public?, false) %>
+  <%= f.label(:is_public?, "Private") %>
+
+  <br><br>
+  <%= f.submit("New Unit Plan") %>
+<% end %> 

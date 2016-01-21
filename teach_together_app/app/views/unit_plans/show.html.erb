@@ -1,6 +1,8 @@
-<ul>
-  <li>
-    <%= @unitplan.title %>
-    <%= @unitplan.created_at %>
-  </li>
-</ul>
+<div class="body">
+
+  <h1><%= @unitplan.title %></h1>
+  <p><b>Created at: </b><%= @unitplan.created_at %></p><br/>
+
+</div>
+
+<a href="/unit_plans/<%= @unitplan.id %>/print">Print View</a>

@@ -1,16 +1,12 @@
-<div class = "form-unit-plan">
-  <%= form_tag "/unit_plans" do %>
-    <%= label_tag(:title, "Title :") %><br>
-    <%= text_field_tag(:title) %><br/>
-  <br><br>
-    <%= submit_tag("New Unit Plan") %>
-  <% end %> 
+<div class="body">
+
+  <div class = "form-unit-plan">
+
+  <%= render 'form' %>
+
+  </div>
+
+
+
+  
 </div>
-
-
-  <ul>
-    <li>
-      <%= @unitplan.title %>
-      <%= @unitplan.created_at %>
-    </li>
-  </ul>

@@ -1,8 +1,15 @@
-<% @unitplans.each do |unitplan| %>
-  <ul>
-    <li>
-      <%= unitplan.title %><br/>
-      <%= unitplan.created_at %>
-    </li>
-  </ul>
-<% end %>
+<div class="body">
+
+<h1>Your Unit Plans</h1>
+
+  <% @unitplans.each do |unitplan| %>
+    <ul>
+      <li>
+        <a href="/unitplans/<%= unitplan.id %>"><%= unitplan.title %></a><br/>
+        <p><b>Created at: </b><%= unitplan.created_at %></p><br/>
+        <image class="plan-sample" src="<%= unitplan.document_url %>">
+      </li>
+    </ul>
+  <% end %>
+
+</div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160120220453) do
+ActiveRecord::Schema.define(version: 20160121182041) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,7 +43,21 @@ ActiveRecord::Schema.define(version: 20160120220453) do
     t.integer  "user_id"
     t.string   "document_url"
     t.boolean  "is_public?"
-    t.integer  "network_id",   default: 0
+    t.integer  "network_id",          default: 0
+    t.string   "author"
+    t.string   "grade"
+    t.string   "subject"
+    t.string   "start"
+    t.string   "description"
+    t.string   "big_idea"
+    t.string   "essential_question"
+    t.string   "standard"
+    t.string   "swbat"
+    t.string   "formal_assessment"
+    t.string   "informal_assessment"
+    t.string   "key_vocabulary"
+    t.string   "material"
+    t.string   "ends"
   end
 
   create_table "users", force: :cascade do |t|
