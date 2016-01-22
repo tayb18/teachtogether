@@ -2,6 +2,7 @@
 /*font-family: 'Abel', sans-serif;*/
 
 
+
 body {
   margin: 0 auto;
   background-image: url('http://homehdwallpaper.biz/wp-content/uploads/ktz/light-wood-grain-texture-2yclpl2eny1z88jqknxo96.jpg');
@@ -78,6 +79,47 @@ body {
   margin-top: 5px;
 }
 
+.nav-right {
+  position: fixed; 
+  padding: 10px;
+  top: 0; right: 0; 
+  height: 100%; width:50px; 
+  background: #C3E4ED;
+  color: #000033;
+  margin-right: 100px;
+  margin-top: 77px;
+  width: 90px;
+  padding-top: 10px;
+}
+
+.nav-right li {
+  width: 80px;
+  font-size: 15px;
+}
+
+.nav-right li :hover {
+  background-color: #7AC5CD;
+}
+
+.nav-right a :active {
+  background-color: #73B1B7;
+}
+    
+.nav-right ul {
+  list-style:none;
+  margin:0; padding:0;
+} 
+.nav-right li {
+  margin-bottom:25px;
+  padding-bottom: 10px;
+}
+
+  
+.nav-right a {
+  color:shade(darkslategray, 50%);
+  text-decoration: none;
+  border-bottom:1px solid transparent; 
+}
 
 
 /* =====================================
@@ -337,3 +379,9 @@ body {
   text-decoration: none;
 }
 
+/* =====================================
+  USER SHOW
+   ===================================== */
+.main-content {
+
+}

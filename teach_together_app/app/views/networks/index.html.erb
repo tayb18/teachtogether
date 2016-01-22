@@ -1,0 +1,9 @@
+<div class="body">
+  <h1>Your Networks</h1>
+
+  <% @networks.each do |network| %>
+    <ul>
+      <li><a href="/users/<%= network.admin_id %>/networks/<%= network.id %>"><%= network.network_name %></a></li>
+    </ul>
+  <% end %>  
+</div>

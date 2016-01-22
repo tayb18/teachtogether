@@ -13,12 +13,7 @@
 <body>
 <div class="container">
 
-  <div class="col grid-1-8"></div>
-
-   
-
-  
-    
+  <div class="col grid-1-8"></div>    
 
   <div class="nav-bar header section col grid-6-8">
     <div class="logo">
@@ -27,7 +22,6 @@
 
     <div class="nav">
       <ul>
-
             <% if session[:user_id] %>
               <% @user = session[:user_id] %>
               <li class="nav-links">
@@ -35,8 +29,6 @@
               </li>
               
               <li class="nav-links"><a href="/index">BROWSE</a></li>
-
-              <li class="nav-links"><a href="/unit_plans/new">CREATE</a></li>
               
               <li class="nav-links"><a href="/about">ABOUT</a></li>
 
@@ -45,7 +37,7 @@
 
             <li class="nav-links"><a href="/index">BROWSE</a></li>
 
-            <li class="nav-links"><a href="/unit_plans/new">CREATE</a></li>
+            <li class="nav-links create"><a href="/create">CREATE</a></li>
             
             <li class="nav-links"><a href="/about">ABOUT</a></li>
             
@@ -55,13 +47,33 @@
 
             <li class="nav-links"><a href="/">HOME</a></li>
 
-            <% end %>
-        
-        
+            <% end %>        
       </ul>
     </div>
-  </div>
- 
+  </div> 
+
+  <% if session[:user_id] %>
+    <div class="nav-right">
+      <ul>
+        <li>
+          <a href="/unit_plans">Your Unit Plans</a>
+        </li>
+        <li>
+          <a href="/unit_plans/new">New Unit Plan</a>
+        </li>
+        <li>
+          <a href="/lesson_plans">Your Lesson Plans</a>
+        </li>
+        <li>
+          <a href="/lesson_plans/new">New Lesson Plans</a>
+        </li>
+        <li>
+          <a href="/users/:id/networks">Networks</a>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+
   <div class="col grid-6-8" id="main"> 
    
     <%= yield %>

@@ -1,5 +1,6 @@
 User.delete_all
 UnitPlan.delete_all
+Network.delete_all
 
 user1 = User.create({
   first_name: "Taylor", 
@@ -8,13 +9,31 @@ user1 = User.create({
   password: "password",
   password_confirmation: "password"
   })
-
 user2 = User.create({
   first_name: "Anna", 
   last_name: "Rankin",
   email: "anna@gmail.com",
   password: "password",
   password_confirmation: "password"
+  })
+user3 = User.create({
+  first_name: "Maddie", 
+  last_name: "Bucheit",
+  email: "email3@email.com",
+  password: "password",
+  password_confirmation: "password"
+  })
+user4 = User.create({
+  first_name: "Jess", 
+  last_name: "Less",
+  email: "email4@email.com",
+  password: "password",
+  password_confirmation: "password"
+  })
+
+network1 = Network.create({
+  network_name: "9th Grade Sp.Ed. Teachers",
+  admin_id: user1.id
   })
 
 unitplan1 = UnitPlan.create({
@@ -58,3 +77,8 @@ unitplan2 = UnitPlan.create({
   key_vocabulary: "Numerator, Denominator, Reciprocal, Least Common Denominator",
   material: "Scissors, glue, pen, paper, ruler, brains"
   })
+
+network1.users.push(user1)
+network1.users.push(user2)
+network1.users.push(user3)
+network1.users.push(user4)

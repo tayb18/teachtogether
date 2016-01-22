@@ -7,8 +7,10 @@ Rails.application.routes.draw do
 
   get '/index' => 'anyones#index'
   get '/about' => 'anyones#show'
-
+  get '/create' => 'anyones#new'
+ 
   get '/unit_plans/:id/print' => 'unit_plans#print'
+  get '/lesson_plans/:id/print' => 'lesson_plans#print'
 
   resources :users, except: [:index] do
     resources :networks

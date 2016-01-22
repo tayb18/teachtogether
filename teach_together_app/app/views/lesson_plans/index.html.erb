@@ -1,0 +1,13 @@
+<div class="body"> 
+  <h1>Your Lesson Plans</h1>
+
+  <% @lessonplans.each do |lessonplan| %>
+    <ul>
+      <li>
+      <a href="/lesson_plans/<%= lessonplan.id %>"><%= lessonplan.title %></a>
+      <p><%= lessonplan.created_at %></p>
+      </li>
+    </ul>
+  <% end %>
+
+</div>

@@ -1,0 +1,10 @@
+<%= form_for @unitplan, url: {action: 'create'} do |f| %>
+  
+  <%= f.hidden_field(:admin_id, :value => @adminid) %>
+
+  <%= f.label(:network_name, "Network Name: ") %>
+  <%= f.text_field(:network_name) %><br/><br/>
+
+  <%= f.submit("New Unit Plan") %>
+
+<% end %>

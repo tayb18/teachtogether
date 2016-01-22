@@ -10,7 +10,8 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-ActiveRecord::Schema.define(version: 20160121182041) do
+
+ActiveRecord::Schema.define(version: 20160122185222) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,12 +23,25 @@ ActiveRecord::Schema.define(version: 20160121182041) do
     t.integer  "user_id"
     t.string   "document_url"
     t.boolean  "is_public?"
-    t.integer  "network_id",   default: 0
+    t.integer  "network_id",         default: 0
+    t.string   "author"
+    t.string   "grade"
+    t.string   "subject"
+    t.string   "date_and_time"
+    t.string   "standard"
+    t.string   "objective"
+    t.string   "essential_question"
+    t.string   "assessment"
+    t.string   "vocabulary"
+    t.string   "introduction"
+    t.string   "learning_plan"
+    t.string   "material"
+    t.string   "closing_summary"
   end
 
   create_table "networks", force: :cascade do |t|
     t.string  "network_name"
-    t.integer "user_id"
+    t.integer "admin_id"
   end
 
   create_table "networks_users", id: false, force: :cascade do |t|
