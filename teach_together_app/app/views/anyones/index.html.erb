@@ -1,0 +1,15 @@
+<div class="body">
+
+<h1>Browse Unit Plans</h1>
+
+  <% @unitplans.each do |unitplan| %>
+    <ul>
+      <li>
+        <a href="/unitplans/<%= unitplan.id %>"><%= unitplan.title %></a>
+        <p><b>Created at: </b><%= unitplan.created_at %></p>
+        <p><b>Author: </b><%= unitplan.author %></p><br/>
+      </li>
+    </ul>
+  <% end %>
+
+</div>

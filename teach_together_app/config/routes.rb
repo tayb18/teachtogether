@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   delete '/login' => 'sessions#destroy'
 
+  get '/index' => 'anyones#index'
+  get '/about' => 'anyones#show'
+
   get '/unit_plans/:id/print' => 'unit_plans#print'
 
   resources :users, except: [:index] do

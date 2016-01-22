@@ -7,48 +7,71 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="/main.js"></script>
 </head>
 <body>
+<div class="container">
 
-<div class="col grid-1-8"></div>
+  <div class="col grid-1-8"></div>
 
- 
+   
 
-<div class="col grid-6-8" id="main">
   
+    
 
-  <div class="nav-bar header section">
+  <div class="nav-bar header section col grid-6-8">
     <div class="logo">
       <img src="/images/logo.png">
     </div>
 
     <div class="nav">
       <ul>
-        <li class="nav-links">
+
             <% if session[:user_id] %>
-              <%= link_to "SIGN OUT", login_path, :method => :delete %>
-              <% @user = User.find(session[:user_id]) %>
+              <% @user = session[:user_id] %>
+              <li class="nav-links">
+                <%= link_to "SIGN OUT", login_path, :method => :delete %>
+              </li>
+              
+              <li class="nav-links"><a href="/index">BROWSE</a></li>
+
+              <li class="nav-links"><a href="/unit_plans/new">CREATE</a></li>
+              
+              <li class="nav-links"><a href="/about">ABOUT</a></li>
+
+              <li class="nav-links"><a href="/users/<%= @user %>">HOME</a></li>
+            <% else %>
+
+            <li class="nav-links"><a href="/index">BROWSE</a></li>
+
+            <li class="nav-links"><a href="/unit_plans/new">CREATE</a></li>
+            
+            <li class="nav-links"><a href="/about">ABOUT</a></li>
+            
+            <li class="nav-links"><a href="/login">LOGIN</a></li>
+
+            <li class="nav-links"><a href="/users/new">SIGN UP</a></li>
+
+            <li class="nav-links"><a href="/">HOME</a></li>
+
             <% end %>
-        </li>
-        <li class="nav-links"><a href="#contact-page">CREATE</a></li>
-        <li class="nav-links"><a href="#resume-page">ABOUT</a></li>
-        <li class="nav-links"><a href="#about-page">LOGIN</a></li>
-        <li class="nav-links"><a href="#portfolio-page">SIGN UP</a></li>
-        <li class="nav-links"><a href="#home-page">HOME</a></li>
+        
+        
       </ul>
     </div>
   </div>
+ 
+  <div class="col grid-6-8" id="main"> 
+   
+    <%= yield %>
+  </div>
 
- 
- 
-  <%= yield %>
+
+
+  <div class="col grid-1-8"></div>
+   
 </div>
-
-
-
-<div class="col grid-1-8"></div>
- 
-  
 
 </body>
 </html>

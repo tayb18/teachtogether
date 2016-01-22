@@ -1,25 +1,43 @@
 <div class="body">
-
+  <div class="line top"></div>
 
   <div class="welcome-box">
-    <ul>
-      <li>Create Unit Plans aligned with the Common Core Standards</li>
-      <li>Build Lesson Plans to align with your units or to stand alone</li>
-      <li>Collaborate with other teachers to ensure all students are learning all core content</li>
-    </ul>
+    <div class="non-semantic-protector">
+      <h1 class="ribbon">
+         <strong class="ribbon-content">WELCOME TO TEACH TOGETHER</strong>
+      </h1>
+    </div>
+    <div class="welcome-box-words">
+      <ul>
+        <li>Create Unit Plans aligned with the Common Core Standards</li>
+        <li>Build Lesson Plans to align with your units or to stand alone</li>
+        <li>Collaborate with other teachers to ensure all students are learning all core content</li>
+      </ul>
+    </div>
+    <div class="welcome-box-image">
+      <img class="pencil" src="/images/Double-J-Design-Ravenna-3d-Pencil.ico">
+    </div>
   </div>
 
+  <div class="generator-box">
+    <div class="generator-words">
+      <h3>Click here for our FREE and easy to use Unit and Lesson Plan Generator. It's Common Core aligned and designed to make your life easier!</h3>
+      <p>Hint: Become a member to save, update and share all your documents.</p>
+    </div>
 
-  <div class = "form-login">
-    <%= form_tag "/login" do %>
-      <%= label_tag "Email :" %><br>
-      <%= email_field_tag :email %><br/>
-
-      <%= label_tag "Password: " %><br>
-      <%= password_field_tag :password %>
-    <br><br>
-      <%= submit_tag "Log in" %>
-    <% end %> 
+    <divclass="generator-logo-link">
+      <a href="/unit_plans/new">
+        <img class="generator-logo" src="/images/reports.png"> 
+      </a>
+    </div>
   </div>
+
+  <div class="links">
+    <button class="links login">Login</button>
+    <button class="links signup">Sign Up</button>
+    <button class="links learnmore">Learn More</button>
+  </div>
+
+  <div class="line bottom"></div>
 
 </div>
