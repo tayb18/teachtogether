@@ -1,15 +1,25 @@
-<div class="body">
+<div class="anyones">
+  <div class="browse-units">
+    <h1>Browse Unit Plans</h1>
+    <% @unitplans.each do |unitplan| %>
+      <ul>
+        <li>
+          <a href="/unit_plans/<%= unitplan.id %>"><b><%= unitplan.title %></b></a>
+          <p>Created <%= time_ago_in_words(unitplan.created_at) %> ago by <%= unitplan.author %></p>
+        </li><br/>
+      </ul>
+    <% end %>
+  </div>
 
-<h1>Browse Unit Plans</h1>
-
-  <% @unitplans.each do |unitplan| %>
-    <ul>
-      <li>
-        <a href="/unitplans/<%= unitplan.id %>"><%= unitplan.title %></a>
-        <p><b>Created at: </b><%= unitplan.created_at %></p>
-        <p><b>Author: </b><%= unitplan.author %></p><br/>
-      </li>
-    </ul>
-  <% end %>
-
+  <div class="browse-lessons">
+    <h1>Browse Lesson Plans</h1>
+    <% @lessonplans.each do |lessonplan| %>
+      <ul>
+        <li>
+          <a href="/lesson_plans/<%= lessonplan.id %>"><b><%= lessonplan.title %></b></a>
+          <p>Created <%= time_ago_in_words(lessonplan.created_at) %> ago by <%= lessonplan.author %></p>
+        </li><br/<
+      </ul>
+    <% end %>
+  </div>
 </div>

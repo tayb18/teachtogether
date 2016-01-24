@@ -5,7 +5,9 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6 }
   has_many :unit_plans
   has_many :lesson_plans
-  has_many :members
+  has_many :comments
+  has_many :forums
   has_and_belongs_to_many :networks
+
 
 end

@@ -1,4 +1,4 @@
-<div class="body">
+<div class="main-content"> 
   <h1><%= @lessonplan.title %></h1>
 
   <p><b>Created at: </b><%= @lessonplan.created_at %></p><br/>
@@ -13,11 +13,10 @@
   <p><b>Assessment: </b><%= @lessonplan.assessment %></p>
   <p><b>Key Vocabulary: </b><%= @lessonplan.vocabulary %></p>
   <p><b>Materials: </b><%= @lessonplan.material %></p>
+  <p><b>Introduction: </b><%= @lessonplan.introduction %></p>
+  <p><b>Learning Plan: </b><%= @lessonplan.learning_plan %></p>
+  <p><b>Closing Summary: </b><%= @lessonplan.closing_summary %></p>
 
-    <p><b>Introduction: </b><%= @lessonplan.introduction %></p>
-    <p><b>Learning Plan: </b><%= @lessonplan.learning_plan %></p>
-    <p><b>Closing Summary: </b><%= @lessonplan.closing_summary %></p>
-
+  <a href="/lesson_plans/<%= @lessonplan.id %>/print">Print View</a>
 </div>
 
-<a href="/lesson_plans/<%= @lessonplan.id %>/print">Print View</a>

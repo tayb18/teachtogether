@@ -12,11 +12,13 @@ Rails.application.routes.draw do
   get '/unit_plans/:id/print' => 'unit_plans#print'
   get '/lesson_plans/:id/print' => 'lesson_plans#print'
 
-  resources :users, except: [:index] do
-    resources :networks
+  resources :users, except: [:index, :update, :edit] 
+  resources :networks, only: [:show, :create, :new]
+  resources :forums, only: [:show, :create, :new] do
+    resources :comments, only: [:create, :new]
   end
-  resources :unit_plans
-  resources :lesson_plans
+  resources :unit_plans, only: [:index, :show, :create, :new]
+  resources :lesson_plans, only: [:index, :show, :create, :new]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

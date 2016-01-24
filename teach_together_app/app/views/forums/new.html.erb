@@ -1,0 +1,22 @@
+<div class="main-content">  
+  <div class = "form-new-forum">
+
+  <%= form_for @forum, url: {action: 'create'} do |f| %>
+  
+    <%= f.hidden_field(:user_id, :value => @user.id) %>
+    <%= f.hidden_field(:author, :value => @user.first_name) %>
+
+    <%= f.label(:title, "Forum Title: ") %>
+    <%= f.text_field(:title) %><br/> 
+
+    <%= f.label(:body, "Body: ") %>
+    <%= f.text_field(:body) %><br/><br/>
+
+
+    <%= f.submit("Start New Forum") %>
+ 
+  <% end %>
+
+  </div>
+</div>
+  

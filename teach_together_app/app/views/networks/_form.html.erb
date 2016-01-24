@@ -1,10 +1,14 @@
-<%= form_for @unitplan, url: {action: 'create'} do |f| %>
+<%= form_for @network, url: {action: 'create'} do |f| %>
   
   <%= f.hidden_field(:admin_id, :value => @adminid) %>
 
   <%= f.label(:network_name, "Network Name: ") %>
-  <%= f.text_field(:network_name) %><br/><br/>
+  <%= f.text_field(:network_name) %><br/>
 
-  <%= f.submit("New Unit Plan") %>
+  <%= f.label(:member_emails, "Invite Members (email addresses seperated by a ','' ): ") %>
+  <%= f.text_field(:member_emails) %><br/><br/>
+
+
+  <%= f.submit("Create New Network") %>
 
 <% end %>

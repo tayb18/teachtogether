@@ -11,10 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160122185222) do
+ActiveRecord::Schema.define(version: 20160124160336) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.string  "body"
+    t.string  "author"
+    t.integer "forum_id"
+  end
+
+  create_table "forums", force: :cascade do |t|
+    t.string  "title"
+    t.string  "body"
+    t.string  "author"
+    t.integer "network_id"
+    t.integer "user_id"
+  end
 
   create_table "lesson_plans", force: :cascade do |t|
     t.string   "title"
@@ -42,12 +56,16 @@ ActiveRecord::Schema.define(version: 20160122185222) do
   create_table "networks", force: :cascade do |t|
     t.string  "network_name"
     t.integer "admin_id"
+    t.string  "member_emails"
   end
 
   create_table "networks_users", id: false, force: :cascade do |t|
     t.integer "network_id"
     t.integer "user_id"
   end
+
+  add_index "networks_users", ["network_id", "user_id"], name: "index_networks_users_on_network_id_and_user_id", using: :btree
+  add_index "networks_users", ["user_id", "network_id"], name: "index_networks_users_on_user_id_and_network_id", using: :btree
 
   create_table "unit_plans", force: :cascade do |t|
     t.string   "title"

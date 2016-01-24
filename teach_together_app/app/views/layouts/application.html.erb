@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TeachTogetherApp</title>
+  <title>Teach Together</title>
+  <link rel="shortcut icon" href="http://images.clipartpanda.com/light-bulb-vector-png-15-Light-Bulb-icon.png">
   <link rel="stylesheet" type="text/css" href="/grid.css">
   <link rel="stylesheet" type="text/css" href="/style.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -53,6 +54,7 @@
   </div> 
 
   <% if session[:user_id] %>
+    <% @user = session[:user_id] %>
     <div class="nav-right">
       <ul>
         <li>
@@ -67,16 +69,28 @@
         <li>
           <a href="/lesson_plans/new">New Lesson Plans</a>
         </li>
-        <li>
-          <a href="/users/:id/networks">Networks</a>
-        </li>
       </ul>
     </div>
+
   <% end %>
 
   <div class="col grid-6-8" id="main"> 
-   
-    <%= yield %>
+    <div class="body">
+      <div class="line top"></div>
+      <%= yield %>
+
+      <div class="footer">
+        <div class="line bottom"></div>
+        <div class="footer-content">
+          <div class="contant-us">
+            <p class="footer-words">Have any tips, suggestions or comments for us? We’d love to hear from you!</p>
+            <a href="mailto:teachtogetherinfo@gmail.com.com"><img id="email-logo" src="/images/google-plus-icon.png"></a>
+          </div>
+        <img id="footer-img" src="/images/happyteaching.png">
+      </div>
+    </div>
+  </div>
+
   </div>
 
 

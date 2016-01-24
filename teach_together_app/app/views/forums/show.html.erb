@@ -1,0 +1,21 @@
+<div class="main-content">
+  <h1><%= @forum.title %></h1>
+  <h3>Network: <%= @network %> &nbsp; Created By: <%= @user.first_name %> <%= @user.last_name %></h3>
+  <p><%= @forum.body %></p>
+
+  <h3><b>Comments: </b></h3>
+
+  <% @comments.each do |comment| %>
+    <ul>
+      <li>
+        <b><%= comment.author %></b>
+        <%= comment.body %>
+      </li>
+    </ul>
+  <% end %>
+
+
+  <a href="/forums/<%= @forum.id %>/comments/new">New Comment</a>
+</div>
+  
+ 

@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   def show
     if session[:user_id]
       @user = User.find(params[:id])
+      @networks = @user.networks.all
     else
       redirect_to '/'
     end

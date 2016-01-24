@@ -1,5 +1,40 @@
-<div class="body">
+<div class="main-content">
+  <div class="network-section">
+    <h1><%= @network.network_name %> Network</h1>
+    <% @members.each do |member| %>
+      <%= member.first_name %> <%= member.last_name %> -
+    <% end %>
+  </div>
 
-  <h1>Show Networks</h1>
+
+  
+    <h2>Network Forum Topics</h2>
+    <% @forums.each do |forum| %>
+      <ul>
+        <li><a href="/forums/<%= forum.id %>"><%= forum.title %></a></li>
+      </ul>
+    <% end %>
+    <a class="new" href="/forums/new">Start New Forum</a><br/><br/><br/>
+  
+
+    <div class="network-lists unitplans-list">
+      <h2>Unit Plans</h2>
+      <% @unitplans.each do |unitplan| %>
+        <ul>
+          <li><a href="/unit_plans/<%= unitplan.id %>"><%= unitplan.title %></a></li>
+        </ul>
+      <% end %>
+      <br/>
+    </div>
+
+    <div class="network-lists lessonplans-list"> 
+      <h2>Lesson Plans</h2>
+      <% @lessonplans.each do |lessonplan| %>
+        <ul>
+          <li><a href="/lesson_plans/<%= lessonplan.id %>"><%= lessonplan.title %></a></li>
+        </ul>
+      <% end %>
+    </div>
 
 </div>
+  

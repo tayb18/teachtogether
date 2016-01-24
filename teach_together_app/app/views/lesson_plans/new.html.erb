@@ -1,8 +1,17 @@
-<div class="body">
+<% if session[:user_id] %>
+  <div class="main-content">
+    <h1>New Lesson Plan</h1>
+    <div class = "form-unit-plan">
+
+      <%= render 'form' %>
+
+    </div>
+  </div>
+<% else %>
   <h1>New Lesson Plan</h1>
   <div class = "form-unit-plan">
 
     <%= render 'form' %>
 
   </div>
-</div>
+<% end %> 

@@ -1,10 +1,11 @@
-<div class="body">
-  <div class="line top"></div>
-  
+<div class="main-content">
+  <h1>Welcome Back, <%= @user.first_name %></h1>
 
-  <div class="main-content">
-    <h1><%= @user.first_name %>'s Page</h1>
-
-    <a href="/unit_plans/new">Unit Plan Generator</a>
-  </div>
+  <h2>Your Networks</h2>
+  <% @networks.each do |network| %>
+    <ul>
+      <li><a href="/networks/<%= network.id %>"><%= network.network_name %></a></li>
+    </ul>
+  <% end %><br/>
+  <a class="new" href="/networks/new">Create a New Network</a>
 </div>

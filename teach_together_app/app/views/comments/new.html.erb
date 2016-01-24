@@ -1,0 +1,14 @@
+<div class="main-content">
+  <%= form_for @comment, url: {action: 'create'} do |f| %>
+  
+    <%= f.hidden_field(:author, :value => @user.id) %>
+    <%= f.hidden_field(:forum_id, :value => @forum) %>
+
+    <%= f.label(:body, "New Comment: ") %>
+    <%= f.text_field(:body) %><br/> 
+
+    <%= f.submit("Submit Comment") %>
+
+  <% end %>
+</div>
+ 

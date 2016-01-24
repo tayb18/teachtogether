@@ -1,15 +1,14 @@
-<div class="body">
-
-<h1>Your Unit Plans</h1>
+<div class="line top"></div>
+<div class="main-content">
+  <h1>Your Unit Plans</h1>
 
   <% @unitplans.each do |unitplan| %>
     <ul>
       <li>
         <a href="/unit_plans/<%= unitplan.id %>"><%= unitplan.title %></a><br/>
-        <p><b>Created at: </b><%= unitplan.created_at %></p><br/>
+        <p>Created <%= time_ago_in_words(unitplan.created_at) %> ago</p>
         
       </li>
     </ul>
   <% end %>
-
 </div>
