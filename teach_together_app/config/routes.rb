@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :user_mailers
   root 'welcome#index'
 
   get '/login' => 'sessions#new'
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
   resources :users, except: [:index, :update, :edit] 
   resources :networks, only: [:show, :create, :new]
   resources :forums, only: [:show, :create, :new] do
-    resources :comments, only: [:create, :new]
+    resources :comments, only: [:create]
   end
   resources :unit_plans, only: [:index, :show, :create, :new]
   resources :lesson_plans, only: [:index, :show, :create, :new]

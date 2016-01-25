@@ -1,11 +1,12 @@
 <%= form_for @lessonplan, url: {action: 'create'} do |f| %>
   <%= f.hidden_field(:user_id, :value => @userid) %>
+  <%= f.hidden_field(:network_id, :value => @networkid) %>
+  <%= f.hidden_field(:author, :value => @author) %>
 
   <%= f.label(:title, "Title: ") %>
   <%= f.text_field(:title) %><br/><br/>
 
-  <%= f.label(:author, "Author: ") %>
-  <%= f.text_field(:author) %><br/><br/>
+  
 
   <%= f.label(:grade, "Grade: ") %>
   <%= f.text_field(:grade) %><br/><br/>
@@ -43,12 +44,12 @@
   <%= f.label(:closing_summary, "Closing Summary: ") %>
   <%= f.text_field(:closing_summary) %><br/><br/>
 
-  <p>Make this Unit Plan: </p>
+  <p>Make this Lesson Plan: </p>
   <%= f.radio_button(:is_public?, true) %>
   <%= f.label(:is_public?, "Public") %>
   <%= f.radio_button(:is_public?, false) %>
   <%= f.label(:is_public?, "Private") %>
 
   <br><br>
-  <%= f.submit("New Unit Plan") %>
+  <%= f.submit("New Lesson Plan") %>
 <% end %> 

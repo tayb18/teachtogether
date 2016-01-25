@@ -5,7 +5,10 @@ class LessonPlansController < ApplicationController
 
   def new
     @lessonplan = LessonPlan.new
-    @userid = session[:user_id]
+    @userid     = session[:user_id]
+    @getauthor  = User.find(@userid)
+    @author     = @getauthor.first_name + " " + @getauthor.last_name
+    @networkid  = request.query_parameters["networkid"]
   end
 
   def create

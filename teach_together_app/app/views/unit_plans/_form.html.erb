@@ -1,6 +1,7 @@
 <%= form_for @unitplan, url: {action: 'create'} do |f| %>
   <%= f.hidden_field(:user_id, :value => @userid) %>
-
+  <%= f.hidden_field(:network_id, :value => @networkid) %>
+ 
   <%= f.label(:title, "Title: ") %>
   <%= f.text_field(:title) %><br/><br/>
 

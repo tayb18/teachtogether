@@ -1,4 +1,6 @@
 class NetworksController < ApplicationController
+  
+  
    
   def new
     if session[:user_id]
@@ -8,7 +10,7 @@ class NetworksController < ApplicationController
       redirect_to '/'
     end
   end
-
+ 
   def create
     @network = Network.create(network_params)
     @adminid = User.find(session[:user_id])

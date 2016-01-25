@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160124160336) do
+ActiveRecord::Schema.define(version: 20160125192240) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 20160124160336) do
     t.integer  "user_id"
     t.string   "document_url"
     t.boolean  "is_public?"
-    t.integer  "network_id",         default: 0
     t.string   "author"
     t.string   "grade"
     t.string   "subject"
@@ -51,6 +50,7 @@ ActiveRecord::Schema.define(version: 20160124160336) do
     t.string   "learning_plan"
     t.string   "material"
     t.string   "closing_summary"
+    t.integer  "network_id"
   end
 
   create_table "networks", force: :cascade do |t|
@@ -74,7 +74,6 @@ ActiveRecord::Schema.define(version: 20160124160336) do
     t.integer  "user_id"
     t.string   "document_url"
     t.boolean  "is_public?"
-    t.integer  "network_id",          default: 0
     t.string   "author"
     t.string   "grade"
     t.string   "subject"
@@ -89,6 +88,14 @@ ActiveRecord::Schema.define(version: 20160124160336) do
     t.string   "key_vocabulary"
     t.string   "material"
     t.string   "ends"
+    t.integer  "network_id"
+  end
+
+  create_table "user_mailers", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

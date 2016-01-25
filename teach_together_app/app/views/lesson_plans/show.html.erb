@@ -1,9 +1,8 @@
 <div class="main-content"> 
   <h1><%= @lessonplan.title %></h1>
-
-  <p><b>Created at: </b><%= @lessonplan.created_at %></p><br/>
-
   <h3><b>By: </b><%= @lessonplan.author %></h3>
+  <p>Created <%= time_ago_in_words(@lessonplan.created_at) %> ago</p>
+
   <h5><b>Grade: </b><%= @lessonplan.grade %></h5>
   <h5><b>Subject: </b><%= @lessonplan.subject %></h5>
   <h5><b>Date and Time: </b><%= @lessonplan.date_and_time %></h5>

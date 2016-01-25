@@ -17,6 +17,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
+      
       redirect_to @user
     elsif @user.password.length < 7
       flash[:notice] = "Sorry! Passwords must be at least 6 characters. Try again!"

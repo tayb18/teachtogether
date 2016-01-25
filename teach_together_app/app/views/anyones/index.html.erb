@@ -6,6 +6,7 @@
         <li>
           <a href="/unit_plans/<%= unitplan.id %>"><b><%= unitplan.title %></b></a>
           <p>Created <%= time_ago_in_words(unitplan.created_at) %> ago by <%= unitplan.author %></p>
+          <p>Grade: <%= unitplan.grade %> Subject: <%= unitplan.subject %></p>
         </li><br/>
       </ul>
     <% end %>
@@ -18,7 +19,8 @@
         <li>
           <a href="/lesson_plans/<%= lessonplan.id %>"><b><%= lessonplan.title %></b></a>
           <p>Created <%= time_ago_in_words(lessonplan.created_at) %> ago by <%= lessonplan.author %></p>
-        </li><br/<
+          <p>Grade: <%= lessonplan.grade %> Subject: <%= lessonplan.subject %></p>
+        </li><br/>
       </ul>
     <% end %>
   </div>

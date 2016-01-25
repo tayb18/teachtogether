@@ -14,7 +14,7 @@
         <li><a href="/forums/<%= forum.id %>"><%= forum.title %></a></li>
       </ul>
     <% end %>
-    <a class="new" href="/forums/new">Start New Forum</a><br/><br/><br/>
+    <a class="new" href="/forums/new?networkid=<%= @network.id%>">Start New Forum</a><br/><br/><br/>
   
 
     <div class="network-lists unitplans-list">
@@ -24,6 +24,7 @@
           <li><a href="/unit_plans/<%= unitplan.id %>"><%= unitplan.title %></a></li>
         </ul>
       <% end %>
+      <a class="new" href="/unit_plans/new?networkid=<%= @network.id %>">New Network Unit Plan</a>
       <br/>
     </div>
 
@@ -34,6 +35,7 @@
           <li><a href="/lesson_plans/<%= lessonplan.id %>"><%= lessonplan.title %></a></li>
         </ul>
       <% end %>
+      <a class="new" href="/lesson_plans/new?networkid=<%= @network.id %>">New Network Lesson Plan</a>
     </div>
 
 </div>

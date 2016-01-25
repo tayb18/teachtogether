@@ -1,10 +1,12 @@
 <div class="main-content">  
   <div class = "form-new-forum">
-
+ <%= @user.id %>
+ <%= @networkid['networkid'] %>
   <%= form_for @forum, url: {action: 'create'} do |f| %>
   
     <%= f.hidden_field(:user_id, :value => @user.id) %>
     <%= f.hidden_field(:author, :value => @user.first_name) %>
+    <%= f.hidden_field(:network_id, :value => @network.id) %>
 
     <%= f.label(:title, "Forum Title: ") %>
     <%= f.text_field(:title) %><br/> 

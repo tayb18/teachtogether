@@ -1,6 +1,6 @@
 <div class="main-content">
   <h1><%= @forum.title %></h1>
-  <h3>Network: <%= @network %> &nbsp; Created By: <%= @user.first_name %> <%= @user.last_name %></h3>
+  <h3>Network: <%= @networkname.network_name %> &nbsp; | &nbsp; Created By: <%= @forum.author %> </h3>
   <p><%= @forum.body %></p>
 
   <h3><b>Comments: </b></h3>
@@ -8,14 +8,24 @@
   <% @comments.each do |comment| %>
     <ul>
       <li>
-        <b><%= comment.author %></b>
+        <b><%= comment.author %>: </b>
         <%= comment.body %>
       </li>
     </ul>
   <% end %>
 
+  <%= form_for [@forum, Comment.new] do |f| %>
 
-  <a href="/forums/<%= @forum.id %>/comments/new">New Comment</a>
+    <%= f.hidden_field(:author, :value => @user.first_name) %>
+    <%= f.hidden_field(:forum_id, :value => @forum.id) %>
+
+    <%= f.label(:body, "New Comment: ") %>
+    <%= f.text_field(:body) %><br/> 
+
+    <%= f.submit("Submit Comment", class: 'new') %>
+
+  <% end %>
+
 </div>
   
  

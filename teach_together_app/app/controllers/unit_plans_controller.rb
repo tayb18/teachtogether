@@ -2,10 +2,11 @@ class UnitPlansController < ApplicationController
   def index
     @unitplans = UnitPlan.where user_id: session[:user_id]
   end
- 
+   
   def new
     @unitplan = UnitPlan.new
     @userid = session[:user_id]
+    @networkid = request.query_parameters["networkid"]
   end
 
   def create
