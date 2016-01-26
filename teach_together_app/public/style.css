@@ -453,6 +453,10 @@ a {
   SIGNUP LOGIN
    ===================================== */
 
+.welcome-box-words li {
+  margin-bottom: 15px;
+}
+
 .signup-login {
   position: relative;
   text-align: center;
@@ -573,6 +577,11 @@ input {
 /* =====================================
   MAIN USER PAGES
    ===================================== */
+
+.create-body {
+  display: inline-block;
+  margin-bottom: 50px;
+}
 
 #forum-page {
   padding-bottom: 40px;
@@ -727,7 +736,7 @@ input {
   width: 70%;
 }
 
-.comments {
+-omments {
   margin-left: 20%;
   margin-right: 20px;
   width: 400px;
