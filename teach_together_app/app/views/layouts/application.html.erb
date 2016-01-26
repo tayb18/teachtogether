@@ -17,62 +17,47 @@
 
   <div class="col grid-1-8"></div>    
 
-  <div class="nav-bar header section col grid-6-8">
-    <div class="logo">
-      <img src="/images/logo.png">
-    </div>
-
-    <div class="nav">
-      <ul>
-            <% if session[:user_id] %>
-              <% @user = session[:user_id] %>
-              <li class="nav-links">
-                <%= link_to "SIGN OUT", login_path, :method => :delete %>
-              </li>
-              
-              <li class="nav-links"><a href="/index">BROWSE</a></li>
-              
-              <li class="nav-links"><a href="/about">ABOUT</a></li>
-
-              <li class="nav-links"><a href="/users/<%= @user %>">HOME</a></li>
-            <% else %>
-
-            <li class="nav-links"><a href="/index">BROWSE</a></li>
-
-            <li class="nav-links create"><a href="/create">CREATE</a></li>
-            
-            <li class="nav-links"><a href="/about">ABOUT</a></li>
-            
-            <li class="nav-links"><a href="/login">LOGIN</a></li>
-
-            <li class="nav-links"><a href="/users/new">SIGN UP</a></li>
-
-            <li class="nav-links"><a href="/">HOME</a></li>
-
-            <% end %>        
-      </ul>
-    </div>
-  </div> 
-
   <% if session[:user_id] %>
-    <% @user = session[:user_id] %>
+    <% @user = User.find(session[:user_id]) %>
+    <div class="nav-bar header section col grid-6-8">
+      <div class="logo">
+        <img src="/images/logo.png">
+      </div>
+      <div class="nav">
+        <ul>
+          <li><%= link_to "SIGN OUT", login_path, :method => :delete %></li></ul>
+          <li>Logged in as <%= @user.first_name %></li>          
+      </div>
+    </div>
     <div class="nav-right">
       <ul>
-        <li>
-          <a href="/unit_plans">Your Unit Plans</a>
-        </li>
-        <li>
-          <a href="/unit_plans/new">New Unit Plan</a>
-        </li>
-        <li>
-          <a href="/lesson_plans">Your Lesson Plans</a>
-        </li>
-        <li>
-          <a href="/lesson_plans/new">New Lesson Plans</a>
-        </li>
+        <li><a href="/users/<%= @user.id %>">Home</a></li>
+        <li><a href="/unit_plans">Your Unit Plans</a></li>
+        <li><a href="/unit_plans/new">New Unit Plan</a></li>
+        <li><a href="/unit_plans">Browse Unit Plans</a></li>
+        <li><a href="/lesson_plans">Your Lesson Plans</a></li>
+        <li><a href="/lesson_plans/new">New Lesson Plans</a></li>
+        <li><a href="/lesson_plans">Browse Lesson Plans</a></li>
+        
       </ul>
     </div>
+  <% else %>
+      <div class="nav-bar header section col grid-6-8">
+        <div class="logo">
+          <img src="/images/logo.png">
+        </div>
 
+        <div class="nav">
+          <ul>
+            <li class="nav-links"><a href="/index">BROWSE</a></li>
+            <li class="nav-links create"><a href="/create">CREATE</a></li>        
+            <li class="nav-links"><a href="/about">ABOUT</a></li>      
+            <li class="nav-links"><a href="/login">LOGIN</a></li>
+            <li class="nav-links"><a href="/users/new">SIGN UP</a></li>
+            <li class="nav-links active"><a href="/">HOME</a></li>       
+          </ul>
+        </div>
+      </div> 
   <% end %>
 
   <div class="col grid-6-8" id="main"> 

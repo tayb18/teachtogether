@@ -4,9 +4,9 @@
   <% @lessonplans.each do |lessonplan| %>
     <ul>
       <li>
-      <a href="/lesson_plans/<%= lessonplan.id %>"><%= lessonplan.title %></a>
+      <a href="/lesson_plans/<%= lessonplan.id %>"><h3><%= lessonplan.title %></h3></a>
       <p>Created <%= time_ago_in_words(lessonplan.created_at) %></p>
-      </li>
+      </li><br/>
     </ul>
   <% end %>
 </div>

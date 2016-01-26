@@ -5,10 +5,10 @@
   <% @unitplans.each do |unitplan| %>
     <ul>
       <li>
-        <a href="/unit_plans/<%= unitplan.id %>"><%= unitplan.title %></a><br/>
+        <a href="/unit_plans/<%= unitplan.id %>"><h3><%= unitplan.title %></h3></a>
         <p>Created <%= time_ago_in_words(unitplan.created_at) %> ago</p>
         
-      </li>
+      </li><br/>
     </ul>
   <% end %>
 </div>

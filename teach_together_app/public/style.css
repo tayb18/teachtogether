@@ -93,6 +93,11 @@ a {
   text-shadow: 1px 1px 1px #939393;
 }
 
+.nav-links li a.current {
+  text-shadow: 1px 1px 1px #939393; 
+  background-color: pink;
+}
+
 .logo img {
   height: 60px;
   width: 130px;
@@ -102,7 +107,7 @@ a {
 }
 
 .nav-right {
-  position: fixed; 
+  position: absolute; 
   padding: 10px;
   top: 0; right: 0; 
   height: 430px; 
@@ -115,14 +120,19 @@ a {
   margin-right: 100px;
   margin-top: 77px;
   margin-bottom: 10px;
-  width: 95px;
-  padding-top: 10px;
+  width: 105px;
+  padding-left: 5px;
+  padding-right: 5px;
+  min-height: 530px;
+  max-height: 100%;
 }
 
 .nav-right li {
   width: 95px;
   height: 35px;
-  font-size: 15px;
+  font-size: 13px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
 }
 
 .nav-right li :hover {
@@ -139,10 +149,7 @@ a {
   list-style:none;
   margin:0; padding:0;
 } 
-.nav-right li {
-  margin-bottom:25px;
-  padding-bottom: 10px;
-}
+
 
   
 .nav-right a {
@@ -317,9 +324,9 @@ a {
   display: inline-block;
   text-align: right;
   float: left;
-  width: 70%;
+  width: 65%;
   margin-right: 45px;
-  margin-left: 10px;
+  margin-left: 25px;
 }
 
 .generator-logo-link {
@@ -567,6 +574,9 @@ input {
   MAIN USER PAGES
    ===================================== */
 
+#forum-page {
+  padding-bottom: 40px;
+} 
 
 .main-content {
   background-color: rgba(219,212,180,.5);
@@ -592,6 +602,25 @@ input {
   padding-right: 20px;
   padding-left: 20px;
   box-shadow: 1px 1px 3px #9e9b9e;
+}
+
+.new-up {
+  margin-left: 12%;
+  margin-top: 15px;
+}
+
+.new-lp {
+  margin-left: 14%;
+  margin-top: 15px;
+}
+
+.new-f {
+  margin-left: 7%;
+  margin-top: 20px;
+}
+
+.all-uplp {
+  margin-bottom: 15px;
 }
 
 .network-section {
@@ -661,9 +690,178 @@ input {
   text-align: center;
 }
 
+#network-btn {
+  margin-left: 7%;
+}
+
 .lessonplans-list {
   margin-left: 10px;
 }
+
+.net-btn {
+  width: 150px;
+  height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 8px;
+  margin-top: 30px;
+  margin-left: 30%;
+  margin-bottom: 20px;
+  font-size: 13px;
+}
+
+.new-net-form {
+  width: 400px;
+  height: 200px;
+  margin-left: 15%;
+  margin-right: 20%;
+}
+
+.new-net-form p{
+  margin-bottom: 30px;
+}
+
+.net-name {
+  width: 70%;
+}
+
+.comments {
+  margin-left: 20%;
+  margin-right: 20px;
+  width: 400px;
+}
+
+.form-new-forum {
+  width: 300px;
+  margin-left: 20%;
+}
+
+.forum-comments {
+  margin-right: 20px;
+}
+
+.forum-comments h3 {
+  margin-bottom: 5px;
+}
+
+.forum-comments p {
+  margin-top: 5px;
+}
+
+.comment-input {
+  width: 70%;
+  border-radius: 10px;
+  height: 6em;
+  padding: 6px;
+  border: none;
+  margin-top: 5px;
+}
+
+.forum-inputs {
+  width: 100%;
+  border: none;
+  box-shadow: 3px 3px 3px -1px rgba(176,173,176,1);
+}
+
+.forum-body {
+  height: 8em;
+  border-radius: 10px;
+  margin-bottom: 0;
+}
+
+.new-forums h1 {
+  margin-bottom: 5px;
+}
+
+.new-forums h3 {
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+#net-back-btn {
+  margin-top: 10px;
+  margin-left: 33% !important; 
+}
+
+#back-net-btn {
+  margin-top: 10px; 
+  margin-left: 32% !important; 
+}
+
+.new.net-btn.back {
+  margin-left: 30%;
+  margin-top: 40px !important;
+  font-size: 13px;
+}
+
+.up-btn {
+  margin-bottom: 20px;
+  margin-left: 35%;
+}
+
+.form-unit-plan {
+  width: 450px;
+  height: 100%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.up-area {
+  height: 6em;
+  border-radius: 10px;
+  border: none;
+  width: 90%;
+}
+
+.up-form {
+  box-shadow: 3px 3px 3px -1px rgba(176,173,176,1);
+}
+
+.up-input {
+  border: none;
+  width: 90%;
+  border-radius: 7px;
+}
+
+#print-btn {
+  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-left: 37%
+}
+
+#lp-print-btn {
+  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-left: 37%
+}
+
+.up-words {
+  margin-right: 10px;
+}
+
+#up-content {
+  padding-bottom: 30px;
+}
+
+#up-content h1 {
+  margin-bottom: 5px;
+}
+
+#up-content h3 {
+  margin-top: 0;
+}
+
+#up-content h5 {
+  font-size: 15px;
+  display: inline-block;
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+
 
 /* =====================================
   FOOTER

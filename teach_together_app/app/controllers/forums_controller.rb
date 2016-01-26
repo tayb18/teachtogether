@@ -4,7 +4,6 @@ class ForumsController < ApplicationController
     @network = @forum.network_id
     @networkname = Network.find(@network)
     @comments = @forum.comments
-    # @user = User.find(@forum.author)
     @comment = Comment.new
     @user = User.find(session[:user_id])
   end

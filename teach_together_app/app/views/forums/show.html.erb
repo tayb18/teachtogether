@@ -1,4 +1,4 @@
-<div class="main-content">
+<div class="main-content" id="forum-page">
   <h1><%= @forum.title %></h1>
   <h3>Network: <%= @networkname.network_name %> &nbsp; | &nbsp; Created By: <%= @forum.author %> </h3>
   <p><%= @forum.body %></p>
@@ -6,10 +6,10 @@
   <h3><b>Comments: </b></h3>
 
   <% @comments.each do |comment| %>
-    <ul>
+    <ul class="forum-comments">
       <li>
-        <b><%= comment.author %>: </b>
-        <%= comment.body %>
+        <h3><%= comment.author %>: </h3>
+        <p><%= comment.body %></p>
       </li>
     </ul>
   <% end %>
@@ -18,13 +18,15 @@
 
     <%= f.hidden_field(:author, :value => @user.first_name) %>
     <%= f.hidden_field(:forum_id, :value => @forum.id) %>
-
-    <%= f.label(:body, "New Comment: ") %>
-    <%= f.text_field(:body) %><br/> 
-
-    <%= f.submit("Submit Comment", class: 'new') %>
+    <div class="comments">
+    <%= f.label(:body, "New Comment: ") %><br/>
+    <%= f.text_area(:body, class: "comment-input") %><br/> 
+    </div>
+    <%= f.submit("Submit Comment", class: 'new net-btn') %>
 
   <% end %>
+
+  <a href="/networks/<%= @networkname.id %>" id="back-net-btn" class="new net-btn back">Back to Network Page</a>
 
 </div>
   

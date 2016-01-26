@@ -14,28 +14,28 @@
         <li><a href="/forums/<%= forum.id %>"><%= forum.title %></a></li>
       </ul>
     <% end %>
-    <a class="new" href="/forums/new?networkid=<%= @network.id%>">Start New Forum</a><br/><br/><br/>
+    <a class="new new-f" href="/forums/new?networkid=<%= @network.id%>">Start New Forum</a><br/><br/><br/>
   
 
     <div class="network-lists unitplans-list">
       <h2>Unit Plans</h2>
       <% @unitplans.each do |unitplan| %>
-        <ul>
+        <ul class="all-uplp">
           <li><a href="/unit_plans/<%= unitplan.id %>"><%= unitplan.title %></a></li>
         </ul>
       <% end %>
-      <a class="new" href="/unit_plans/new?networkid=<%= @network.id %>">New Network Unit Plan</a>
+      <a class="new-up new" href="/unit_plans/new?networkid=<%= @network.id %>">New Network Unit Plan</a>
       <br/>
     </div>
 
     <div class="network-lists lessonplans-list"> 
       <h2>Lesson Plans</h2>
       <% @lessonplans.each do |lessonplan| %>
-        <ul>
+        <ul class="all-uplp">
           <li><a href="/lesson_plans/<%= lessonplan.id %>"><%= lessonplan.title %></a></li>
         </ul>
       <% end %>
-      <a class="new" href="/lesson_plans/new?networkid=<%= @network.id %>">New Network Lesson Plan</a>
+      <a class="new  new-lp" href="/lesson_plans/new?networkid=<%= @network.id %>">New Network Lesson Plan</a>
     </div>
 
 </div>

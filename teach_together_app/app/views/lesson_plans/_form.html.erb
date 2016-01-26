@@ -3,46 +3,46 @@
   <%= f.hidden_field(:network_id, :value => @networkid) %>
   <%= f.hidden_field(:author, :value => @author) %>
 
-  <%= f.label(:title, "Title: ") %>
-  <%= f.text_field(:title) %><br/><br/>
+  <%= f.label(:title, "Title: ") %><br/>
+  <%= f.text_field(:title, class: "up-input up-form") %><br/><br/>
 
   
 
-  <%= f.label(:grade, "Grade: ") %>
-  <%= f.text_field(:grade) %><br/><br/>
+  <%= f.label(:grade, "Grade: ") %><br/>
+  <%= f.text_field(:grade, class: "up-input up-form") %><br/><br/>
 
-  <%= f.label(:subject, "Subject: ") %>
-  <%= f.text_field(:subject) %><br/><br/>
+  <%= f.label(:subject, "Subject: ") %><br/>
+  <%= f.text_field(:subject, class: "up-input up-form") %><br/><br/>
 
-  <%= f.label(:date_and_time, "Date and Time: ") %>
-  <%= f.text_field(:date_and_time) %><br/><br/>
+  <%= f.label(:date_and_time, "Date and Time: ") %><br/>
+  <%= f.text_field(:date_and_time, class: "up-input up-form") %><br/><br/>
 
-  <%= f.label(:standard, "Standards: ") %>
-  <%= f.text_field(:standard) %><br/><br/>
+  <%= f.label(:standard, "Standards: ") %><br/>
+  <%= f.text_area(:standard, class: 'up-area up-form') %><br/><br/>
 
-  <%= f.label(:objective, "Objectives (Students will be able to...): ") %>
-  <%= f.text_field(:objective) %><br/><br/>
+  <%= f.label(:objective, "Objectives (Students will be able to...): ") %><br/>
+  <%= f.text_area(:objective, class: 'up-area up-form') %><br/><br/>
 
-  <%= f.label(:essential_question, "Essential Questions: ") %>
-  <%= f.text_field(:essential_question) %><br/><br/>
+  <%= f.label(:essential_question, "Essential Questions: ") %><br/>
+  <%= f.text_area(:essential_question, class: 'up-area up-form') %><br/><br/>
 
-  <%= f.label(:assessment, "Assessment: ") %>
-  <%= f.text_field(:assessment) %><br/><br/>
+  <%= f.label(:assessment, "Assessment: ") %><br/>
+  <%= f.text_area(:assessment, class: 'up-area up-form') %><br/><br/>
 
-  <%= f.label(:vocabulary, "Key Vocabulary: ") %>
-  <%= f.text_field(:vocabulary) %><br/><br/>
+  <%= f.label(:vocabulary, "Key Vocabulary: ") %><br/>
+  <%= f.text_field(:vocabulary, class: "up-input up-form") %><br/><br/>
 
-  <%= f.label(:material, "Materials: ") %>
-  <%= f.text_field(:material) %><br/><br/>
+  <%= f.label(:material, "Materials: ") %><br/>
+  <%= f.text_field(:material, class: "up-input up-form") %><br/><br/>
 
-  <%= f.label(:introduction, "Introduction: ") %>
-  <%= f.text_field(:introduction) %><br/><br/>
+  <%= f.label(:introduction, "Introduction: ") %><br/>
+  <%= f.text_area(:introduction, class: 'up-area up-form') %><br/><br/>
 
-  <%= f.label(:learning_plan, "Learning Plan: ") %>
-  <%= f.text_field(:learning_plan) %><br/><br/>
+  <%= f.label(:learning_plan, "Learning Plan: ") %><br/>
+  <%= f.text_area(:learning_plan, class: 'up-area up-form') %><br/><br/>
 
-  <%= f.label(:closing_summary, "Closing Summary: ") %>
-  <%= f.text_field(:closing_summary) %><br/><br/>
+  <%= f.label(:closing_summary, "Closing Summary: ") %><br/>
+  <%= f.text_area(:closing_summary, class: 'up-area up-form') %><br/><br/>
 
   <p>Make this Lesson Plan: </p>
   <%= f.radio_button(:is_public?, true) %>
@@ -51,5 +51,5 @@
   <%= f.label(:is_public?, "Private") %>
 
   <br><br>
-  <%= f.submit("New Lesson Plan") %>
+  <%= f.submit("New Lesson Plan", class: "new net-btn up-btn") %>
 <% end %> 

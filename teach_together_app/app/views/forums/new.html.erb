@@ -1,23 +1,26 @@
-<div class="main-content">  
+<div class="main-content new-forums">  
+  <h1>Create a New Forum Post</h1>
+  <h3> For the <%= @network.network_name %> Network </h3>
   <div class = "form-new-forum">
- <%= @user.id %>
- <%= @networkid['networkid'] %>
-  <%= form_for @forum, url: {action: 'create'} do |f| %>
+    
+    <%= form_for @forum, url: {action: 'create'} do |f| %>
   
-    <%= f.hidden_field(:user_id, :value => @user.id) %>
-    <%= f.hidden_field(:author, :value => @user.first_name) %>
-    <%= f.hidden_field(:network_id, :value => @network.id) %>
+      <%= f.hidden_field(:user_id, :value => @user.id) %>
+      <%= f.hidden_field(:author, :value => @user.first_name) %>
+      <%= f.hidden_field(:network_id, :value => @network.id) %>
 
-    <%= f.label(:title, "Forum Title: ") %>
-    <%= f.text_field(:title) %><br/> 
+      <p><%= f.label(:title, "Forum Title: ") %><br/></p>
+      <%= f.text_field(:title, class: "forum-inputs") %><br/> 
 
-    <%= f.label(:body, "Body: ") %>
-    <%= f.text_field(:body) %><br/><br/>
+      <p><%= f.label(:body, "Body: ") %><br/></p>
+      <%= f.text_area(:body, class: "forum-body forum-inputs") %><br/><br/>
 
 
-    <%= f.submit("Start New Forum") %>
+      <%= f.submit("Start New Forum", class: "new net-btn") %>
  
-  <% end %>
+    <% end %>
+
+    <a href="/networks/<%= @network.id %>" id="net-back-btn" class="new net-btn back">Back to Network Page</a>
 
   </div>
 </div>

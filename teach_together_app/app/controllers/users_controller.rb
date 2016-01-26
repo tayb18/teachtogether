@@ -4,6 +4,8 @@ class UsersController < ApplicationController
     if session[:user_id]
       @user = User.find(params[:id])
       @networks = @user.networks.all
+      @all_networks = Network.all
+
     else
       redirect_to '/'
     end

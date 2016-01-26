@@ -1,21 +1,20 @@
-<div class="main-content"> 
+<div class="main-content" id="up-content"> 
   <h1><%= @lessonplan.title %></h1>
-  <h3><b>By: </b><%= @lessonplan.author %></h3>
-  <p>Created <%= time_ago_in_words(@lessonplan.created_at) %> ago</p>
-
-  <h5><b>Grade: </b><%= @lessonplan.grade %></h5>
-  <h5><b>Subject: </b><%= @lessonplan.subject %></h5>
-  <h5><b>Date and Time: </b><%= @lessonplan.date_and_time %></h5>
-  <p><b>Standards: </b><%= @lessonplan.standard %></p>
-  <p><b>Objectives (students will be able to): </b><%= @lessonplan.objective %></p>
-  <p><b>Essential Questions: </b><%= @lessonplan.essential_question %></p>
-  <p><b>Assessment: </b><%= @lessonplan.assessment %></p>
-  <p><b>Key Vocabulary: </b><%= @lessonplan.vocabulary %></p>
-  <p><b>Materials: </b><%= @lessonplan.material %></p>
-  <p><b>Introduction: </b><%= @lessonplan.introduction %></p>
-  <p><b>Learning Plan: </b><%= @lessonplan.learning_plan %></p>
-  <p><b>Closing Summary: </b><%= @lessonplan.closing_summary %></p>
-
-  <a href="/lesson_plans/<%= @lessonplan.id %>/print">Print View</a>
+  <h3><b>By: </b><%= @lessonplan.author %> &nbsp; | &nbsp; Created <%= time_ago_in_words(@lessonplan.created_at) %> ago</h3>
+  <div class="up-words">
+    <h5><b>Grade: </b><%= @lessonplan.grade %> &nbsp;   &nbsp;</h5>
+    <h5><b>Subject: </b><%= @lessonplan.subject %> &nbsp;   &nbsp;</h5>
+    <h5><b>Date & Time: </b><%= @lessonplan.date_and_time %> &nbsp;   &nbsp;</h5>
+    <p><b>Standards: </b><%= @lessonplan.standard %></p>
+    <p><b>Objectives (students will be able to): </b><%= @lessonplan.objective %></p>
+    <p><b>Essential Questions: </b><%= @lessonplan.essential_question %></p>
+    <p><b>Assessment: </b><%= @lessonplan.assessment %></p>
+    <p><b>Key Vocabulary: </b><%= @lessonplan.vocabulary %></p>
+    <p><b>Materials: </b><%= @lessonplan.material %></p>
+    <p><b>Introduction: </b><%= @lessonplan.introduction %></p>
+    <p><b>Learning Plan: </b><%= @lessonplan.learning_plan %></p>
+    <p><b>Closing Summary: </b><%= @lessonplan.closing_summary %></p>
+  </div>
+  <a href="/lesson_plans/<%= @lessonplan.id %>/print" id="lp-print-btn" class="new net-new">Print View</a>
 </div>
 
