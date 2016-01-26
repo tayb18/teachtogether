@@ -32,9 +32,6 @@ class NetworksController < ApplicationController
       @unitplans = @network.unit_plans      
       @forums = @network.forums
       @lessonplans = @network.lesson_plans
-
-      @word = NetworkUser.all
-      puts @word
     else
       redirect_to '/'
     end
