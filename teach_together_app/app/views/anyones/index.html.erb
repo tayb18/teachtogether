@@ -4,7 +4,7 @@
     <% @unitplans.each do |unitplan| %>
       <ul>
         <li>
-          <a href="/unit_plans/<%= unitplan.id %>"><b><%= unitplan.title %></b></a>
+          <a href="/unit_plans/<%= unitplan.id %>"><h3><%= unitplan.title %></h3></a>
           <p>Created <%= time_ago_in_words(unitplan.created_at) %> ago by <%= unitplan.author %></p>
           <p>Grade: <%= unitplan.grade %> Subject: <%= unitplan.subject %></p>
         </li><br/>
@@ -17,7 +17,7 @@
     <% @lessonplans.each do |lessonplan| %>
       <ul>
         <li>
-          <a href="/lesson_plans/<%= lessonplan.id %>"><b><%= lessonplan.title %></b></a>
+          <a href="/lesson_plans/<%= lessonplan.id %>"><h3><%= lessonplan.title %></h3></a>
           <p>Created <%= time_ago_in_words(lessonplan.created_at) %> ago by <%= lessonplan.author %></p>
           <p>Grade: <%= lessonplan.grade %> Subject: <%= lessonplan.subject %></p>
         </li><br/>

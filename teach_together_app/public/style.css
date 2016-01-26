@@ -15,9 +15,19 @@ body {
 
 ul {
   list-style:none;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+li {
+  list-style:none;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 a {
+  list-style:none;
+  list-style-type: none;
   text-decoration: none;
 }
 
@@ -141,71 +151,6 @@ a {
   border-bottom:1px solid transparent; 
 }
 
-.unit-lesson-btn.unit-btn {
-  margin-top: 20px;
-  background: #b2ffb7;
-  background-image: -webkit-linear-gradient(top, #b2ffb7, #89c783);
-  background-image: -moz-linear-gradient(top, #b2ffb7, #89c783);
-  background-image: -ms-linear-gradient(top, #b2ffb7, #89c783);
-  background-image: -o-linear-gradient(top, #b2ffb7, #89c783);
-  background-image: linear-gradient(to bottom, #b2ffb7, #89c783);
-  -webkit-border-radius: 7;
-  -moz-border-radius: 7;
-  border-radius: 7px;
-  text-shadow: 2px 2px 3px #949294;
-  -webkit-box-shadow: 1px 1px 3px #9e9b9e;
-  -moz-box-shadow: 1px 1px 3px #9e9b9e;
-  box-shadow: 1px 1px 3px #9e9b9e;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 10px 45px 10px 45px;
-  border: solid #a2c7ac 1px;
-  text-decoration: none;
-}
-
-.unit-lesson-btn.unit-btn:hover {
-  background: #89c783;
-  background-image: -webkit-linear-gradient(top, #89c783, #b2ffb7);
-  background-image: -moz-linear-gradient(top, #89c783, #b2ffb7);
-  background-image: -ms-linear-gradient(top, #89c783, #b2ffb7);
-  background-image: -o-linear-gradient(top, #89c783, #b2ffb7);
-  background-image: linear-gradient(to bottom, #89c783, #b2ffb7);
-  text-decoration: none;
-}
-
-.unit-lesson-btn.lesson-btn {
-  background: #b5bee8;
-  background-image: -webkit-linear-gradient(top, #b5bee8, #9194bd);
-  background-image: -moz-linear-gradient(top, #b5bee8, #9194bd);
-  background-image: -ms-linear-gradient(top, #b5bee8, #9194bd);
-  background-image: -o-linear-gradient(top, #b5bee8, #9194bd);
-  background-image: linear-gradient(to bottom, #b5bee8, #9194bd);
-  -webkit-border-radius: 7;
-  -moz-border-radius: 7;
-  border-radius: 7px;
-  text-shadow: 2px 2px 3px #949294;
-  -webkit-box-shadow: 1px 1px 3px #9e9b9e;
-  -moz-box-shadow: 1px 1px 3px #9e9b9e;
-  box-shadow: 1px 1px 3px #9e9b9e;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 10px 40px 10px 40px;
-  border: solid #a3a3c7 1px;
-  text-decoration: none;
-}
-
-.unit-lesson-btn.lesson-btn:hover {
-  background: #9194bd;
-  background-image: -webkit-linear-gradient(top, #9194bd, #b5bee8);
-  background-image: -moz-linear-gradient(top, #9194bd, #b5bee8);
-  background-image: -ms-linear-gradient(top, #9194bd, #b5bee8);
-  background-image: -o-linear-gradient(top, #9194bd, #b5bee8);
-  background-image: linear-gradient(to bottom, #9194bd, #b5bee8);
-  text-decoration: none;
-}
-
 .browse-units {
   display: inline-block;
   position: relative;
@@ -294,7 +239,7 @@ a {
   width: 100%;
   margin-top: 20px;
   background-color: rgba(209,180,141,.7);
-
+  position: relative;
 }
 
 .welcome-box {

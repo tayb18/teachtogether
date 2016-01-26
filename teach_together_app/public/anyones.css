@@ -1,0 +1,106 @@
+/*===============================================
+CSS TEMPLATE FOR NON-LOGGED IN PAGES
+===============================================*/
+.anyones h1 {
+  padding-top: 10px;
+  margin-top: 0;
+}
+
+.create-text {
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 100px;
+}
+
+.unit-lesson-btn {
+  margin-top: 30px;
+}
+
+.unit-lesson-btn.unit-btn {
+  background: #b5bee8;
+  background-image: -webkit-linear-gradient(top, #b5bee8, #9194bd);
+  background-image: -moz-linear-gradient(top, #b5bee8, #9194bd);
+  background-image: -ms-linear-gradient(top, #b5bee8, #9194bd);
+  background-image: -o-linear-gradient(top, #b5bee8, #9194bd);
+  background-image: linear-gradient(to bottom, #b5bee8, #9194bd);
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  text-shadow: 2px 2px 3px #949294;
+  -webkit-box-shadow: 1px 1px 3px #9e9b9e;
+  -moz-box-shadow: 1px 1px 3px #9e9b9e;
+  box-shadow: 1px 1px 3px #9e9b9e;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 10px 30px 10px 30px;
+  border: solid #a3a3c7 1px;
+  text-decoration: none;
+  list-style-type: none;
+  display: inline-block;
+  position: relative;
+}
+
+.unit-lesson-btn a{
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.unit-lesson-btn.unit-btn:hover {
+  background: #9194bd;
+  background-image: -webkit-linear-gradient(top, #9194bd, #b5bee8);
+  background-image: -moz-linear-gradient(top, #9194bd, #b5bee8);
+  background-image: -ms-linear-gradient(top, #9194bd, #b5bee8);
+  background-image: -o-linear-gradient(top, #9194bd, #b5bee8);
+  background-image: linear-gradient(to bottom, #9194bd, #b5bee8);
+  text-decoration: none;
+}
+
+.unit-lesson-btn.lesson-btn {
+  background: #b5bee8;
+  background-image: -webkit-linear-gradient(top, #b5bee8, #9194bd);
+  background-image: -moz-linear-gradient(top, #b5bee8, #9194bd);
+  background-image: -ms-linear-gradient(top, #b5bee8, #9194bd);
+  background-image: -o-linear-gradient(top, #b5bee8, #9194bd);
+  background-image: linear-gradient(to bottom, #b5bee8, #9194bd);
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  text-shadow: 2px 2px 3px #949294;
+  -webkit-box-shadow: 1px 1px 3px #9e9b9e;
+  -moz-box-shadow: 1px 1px 3px #9e9b9e;
+  box-shadow: 1px 1px 3px #9e9b9e;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  border: solid #a3a3c7 1px;
+  text-decoration: none;
+  list-style-type: none;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+}
+
+.unit-lesson-btn.lesson-btn:hover {
+  background: #9194bd;
+  background-image: -webkit-linear-gradient(top, #9194bd, #b5bee8);
+  background-image: -moz-linear-gradient(top, #9194bd, #b5bee8);
+  background-image: -ms-linear-gradient(top, #9194bd, #b5bee8);
+  background-image: -o-linear-gradient(top, #9194bd, #b5bee8);
+  background-image: linear-gradient(to bottom, #9194bd, #b5bee8);
+  text-decoration: none;
+}
+
+.collaboration {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  height: 200px;
+  width: 330px;
+}
+
+.about-words {
+/*  border-bottom: solid black 2px;*/
+}

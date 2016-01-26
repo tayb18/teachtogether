@@ -5,6 +5,7 @@
   <link rel="shortcut icon" href="http://images.clipartpanda.com/light-bulb-vector-png-15-Light-Bulb-icon.png">
   <link rel="stylesheet" type="text/css" href="/grid.css">
   <link rel="stylesheet" type="text/css" href="/style.css">
+  <link rel="stylesheet" type="text/css" href="/anyones.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -77,6 +78,7 @@
   <div class="col grid-6-8" id="main"> 
     <div class="body">
       <div class="line top"></div>
+      
       <%= yield %>
 
       <div class="footer">
