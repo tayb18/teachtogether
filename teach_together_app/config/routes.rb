@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/unit_plans/:id/print' => 'unit_plans#print'
   get '/lesson_plans/:id/print' => 'lesson_plans#print'
 
+  resources :network_users, only: [:create]
   resources :users, except: [:index, :update, :edit] 
   resources :networks, only: [:show, :create, :new]
   resources :forums, only: [:show, :create, :new] do

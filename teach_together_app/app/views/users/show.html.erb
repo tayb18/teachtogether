@@ -12,7 +12,18 @@
   <h2>Browse Networks</h2>
   <% @all_networks.each do |network| %>
     <ul>
-      <li><%= network.network_name %> </li>
+      <li>
+        <%= network.network_name %> 
+        <%= form_for @net_user do |f| %>
+
+
+          <%= f.submit('Join Network', class: 'new net-btn') %>
+        <% end %>
+      </li>
     </ul>
   <% end %>
 </div>
+
+
+
+
