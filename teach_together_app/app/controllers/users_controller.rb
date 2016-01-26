@@ -5,7 +5,7 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
       @networks = @user.networks.all
       @all_networks = Network.all
-
+      @net_user = NetworkUser.new
     else
       redirect_to '/'
     end

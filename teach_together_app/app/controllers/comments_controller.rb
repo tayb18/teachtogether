@@ -13,4 +13,4 @@ class CommentsController < ApplicationController
       params.require(:comment).permit(:body, :author, :forum_id)
     end
 
-end 
+end  

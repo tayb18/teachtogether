@@ -14,8 +14,7 @@
     <ul>
       <li>
         <%= network.network_name %> 
-        <% form_for @net_user do %>
-          <% @user = session[:user_id] %>
+        <% form_for @net_user do |f| %>
           <% f.hidden_field(:user_id, value: => @user) %>
           <% f.hidden_field(:network_id, value: => network.id) %>
 
