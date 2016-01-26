@@ -29,6 +29,10 @@ class LessonPlansController < ApplicationController
     render layout: false
   end
 
+  def all
+    @lessonplans = LessonPlan.all
+  end
+
   private 
     def lessonplan_params
       params.require(:lesson_plan).permit(:title, :user_id, :document_url, :created_at, :updated_at, :document_url, :is_public?, :network_id, :author, :grade, :subject, :date_and_time, :essential_question, :standard, :objective, :assessment, :vocabulary, :introduction, :learning_plan, :closing_summary, :material)

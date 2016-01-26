@@ -589,6 +589,7 @@ input {
 
 .main-content {
   background-color: rgba(219,212,180,.5);
+  display: inline-block;
   min-height: 550px;
   max-height: 100%;
   width: 81%;

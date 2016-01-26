@@ -1,0 +1,14 @@
+ <div class="main-content">
+  <div class="browse-units">
+    <h1>Browse Public Lesson Plans</h1>
+    <% @lessonplans.each do |lessonplan| %>
+      <ul>
+        <li>
+          <a href="/lesson_plans/<%= lessonplan.id %>"><h3><%= lessonplan.title %></h3></a>
+          <p>Created <%= time_ago_in_words(lessonplan.created_at) %> ago by <%= lessonplan.author %></p>
+          <p>Grade: <%= lessonplan.grade %> Subject: <%= lessonplan.subject %></p>
+        </li><br/>
+      </ul>
+    <% end %>
+  </div>
+</div>

@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get '/about' => 'anyones#show'
   get '/create' => 'anyones#new'
  
+  get '/unit_plans/all' => 'unit_plans#all'
+  get '/lesson_plans/all' => 'lesson_plans#all'
   get '/unit_plans/:id/print' => 'unit_plans#print'
   get '/lesson_plans/:id/print' => 'lesson_plans#print'
 

@@ -1,0 +1,227 @@
+/* for headers & stuff */
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,700);
+/* font-family: 'Alegreya Sans SC', sans-serif; */
+ 
+/* for body stuff not bold */
+@import url(https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700);
+/* font-family: 'Archivo Narrow', sans-serif; */
+
+body {
+  color: #3f3f3f;
+}
+
+.print-view {
+  width: 620px;
+}
+
+h1 {
+  position: relative;
+  margin: 0 auto;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  border: solid 1px;
+  border-radius: 10px;
+  border-color: #D3D3D3;
+  padding: 5px;
+  width: 100%;
+}
+
+h3 {
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+h5 {
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+ 
+p {
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+.basic-info {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  border: solid 1px;
+  border-radius: 10px;
+  border-color: #D3D3D3;
+  padding: 5px;
+  padding-left: 10px;
+  margin-top: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.basic-info h3 {
+  float: left;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.start-end-description {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  border: solid 1px;
+  border-radius: 10px;
+  border-color: #D3D3D3;
+  padding: 5px;
+  margin-top: 15px;
+  width: 100%;
+  text-align: left;  
+}
+
+.date-time h3{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.date-time p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.start-end h3 {
+  margin: 5px;
+}
+
+.start-end {
+  display: inline-block;
+  float: left;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  text-align: left;
+  width: 38%;
+}
+
+.description {
+  display: inline-block;
+  float: right;
+  border-left: 1px solid #D3D3D3;
+  width: 58%;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.description h3 {  
+  margin: 0;
+}
+
+.description p {
+  margin: 0;
+  margin-top: 5px;
+}
+
+.idea-question-standard {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  border: solid 1px;
+  border-radius: 10px;
+  border-color: #D3D3D3;
+  padding: 5px;
+  padding-left: 10px;
+  margin-top: 15px;
+  width: 100%;
+  text-align: left;
+}
+
+.objectives-assessments {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  border: solid 1px;
+  border-radius: 10px;
+  border-color: #D3D3D3;
+  padding: 5px;
+  padding-left: 10px;
+  margin-top: 15px;
+  width: 100%;
+  text-align: left;
+}
+
+.objectives {
+  width: 45%;
+  float: left;
+  margin-right: 10px;
+  border-right: 1px solid #D3D3D3;
+}
+
+.assessments {
+  width: 50%;
+  float: right;
+}
+
+.vocabulary {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  border: solid 1px;
+  border-radius: 10px;
+  border-color: #D3D3D3;
+  padding: 5px;
+  padding-left: 10px;
+  margin-top: 15px;
+  width: 100%;
+  text-align: left;
+}
+
+.materials {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  border: solid 1px;
+  border-radius: 10px;
+  border-color: #D3D3D3;
+  padding: 5px;
+  padding-left: 10px;
+  margin-top: 15px;
+  width: 100%;
+  text-align: left;
+}
+
+.eq-objective {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  border: solid 1px;
+  border-radius: 10px;
+  border-color: #D3D3D3;
+  padding: 5px;
+  margin-top: 15px;
+  width: 100%;
+  text-align: left;
+}
+
+.lp-objectives {
+  width: 47%;
+  float: left;
+  border-left: 1px solid #D3D3D3;
+  padding-left: 5px;
+}
+
+.eqs {
+  width: 47%;
+  float: left;
+}
+
+.intro-lp-summary {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  border: solid 1px;
+  border-radius: 10px;
+  border-color: #D3D3D3;
+  padding: 5px;
+  margin-top: 15px;
+  width: 100%;
+  text-align: left; 
+}
+
+.intro {
+  border-bottom: 1px solid #D3D3D3;
+}
+
+.learning-plan {
+  border-bottom: 1px solid #D3D3D3;
+}

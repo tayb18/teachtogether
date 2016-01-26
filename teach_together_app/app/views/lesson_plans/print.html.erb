@@ -1,18 +1,55 @@
-  <h1><%= @lessonplan.title %></h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teach Together</title>
+  <link rel="stylesheet" type="text/css" href="/print.css">
+</head>
+<body>  
+  <div class="print-view">
+    <h1>Lesson Title &nbsp; | &nbsp; <%= @lessonplan.title %></h1>  
+    <div class="basic-info">
+      <h3><b>By: </b><%= @lessonplan.author %>&nbsp; | &nbsp;</h3>
+      <h3><b>Grade: </b><%= @lessonplan.grade %>&nbsp; | &nbsp;</h3>
+      <h3><b>Subject: </b><%= @lessonplan.subject %></h3>
+    </div>
+    <div class="start-end-description date-time">
+      <h3>Date & Time &nbsp; : &nbsp;&nbsp;<%= @lessonplan.date_and_time %></h3>
+    </div>
+    <div class="eq-objective">     
+      <div class="eqs">
+        <p><b>Essential Questions: </b><%= @lessonplan.essential_question %></p>
+      </div>
+      <div class="lp-objectives">
+        <p><b>Objectives (SWBAT): </b><%= @lessonplan.objective %></p>
+      </div>
+    </div>
+    <div class="start-end-description date-time">
+      <p><b>Standards: </b><%= @lessonplan.standard %></p>
+    </div>
+    <div class="start-end-description date-time">
+      <p><b>Assessment: </b><%= @lessonplan.assessment %></p>
+    </div>
+    <div class="start-end-description date-time">
+      <p><b>Key Vocabulary: </b><%= @lessonplan.vocabulary %></p>
+    </div>
+    <div class="start-end-description date-time">
+      <p><b>Materials: </b><%= @lessonplan.material %></p>
+    </div>
+    <div class="intro-lp-summary">
+      <div class="intro">
+        <p><b>Introduction: </b><%= @lessonplan.introduction %></p>
+      </div>
+      <div class="learning-plan">
+        <p><b>Learning Plan: </b><%= @lessonplan.learning_plan %></p>
+      </div>   
+      <div class="summary">
+        <p><b>Closing Summary: </b><%= @lessonplan.closing_summary %></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
 
-  <p><b>Created at: </b><%= @lessonplan.created_at %></p><br/>
 
-  <h3><b>By: </b><%= @lessonplan.author %></h3>
-  <h5><b>Grade: </b><%= @lessonplan.grade %></h5>
-  <h5><b>Subject: </b><%= @lessonplan.subject %></h5>
-  <h5><b>Date and Time: </b><%= @lessonplan.date_and_time %></h5>
-  <p><b>Standards: </b><%= @lessonplan.standard %></p>
-  <p><b>Objectives (students will be able to): </b><%= @lessonplan.objective %></p>
-  <p><b>Essential Questions: </b><%= @lessonplan.essential_question %></p>
-  <p><b>Assessment: </b><%= @lessonplan.assessment %></p>
-  <p><b>Key Vocabulary: </b><%= @lessonplan.vocabulary %></p>
-  <p><b>Materials: </b><%= @lessonplan.material %></p>
 
-  <p><b>Introduction: </b><%= @lessonplan.introduction %></p>
-  <p><b>Learning Plan: </b><%= @lessonplan.learning_plan %></p>
-  <p><b>Closing Summary: </b><%= @lessonplan.closing_summary %></p>
+

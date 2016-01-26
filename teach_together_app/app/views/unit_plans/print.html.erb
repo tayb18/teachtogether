@@ -1,15 +1,42 @@
-<h1><%= @unitplan.title %></h1>
-<h3><b>By: </b><%= @unitplan.author %></h3>
-<h5><b>Grade: </b><%= @unitplan.grade %></h5>
-<h5><b>Subject: </b><%= @unitplan.subject %></h5>
-<h5><b>Start Date: </b><%= @unitplan.start %></h5>
-<h5><b>End Date: </b><%= @unitplan.ends %></h5>
-<h5><b>Description: </b><%= @unitplan.description %></h5>
-<p><b>Big Ideas: </b><%= @unitplan.big_idea %></p>
-<p><b>Essential Questions: </b><%= @unitplan.essential_question %></p>
-<p><b>Standards: </b><%= @unitplan.standard %></p>
-<p><b>Students Will Be Able To: </b><%= @unitplan.swbat %></p>
-<p><b>Formal Assessments: </b><%= @unitplan.formal_assessment %></p>
-<p><b>Informal Assessments: </b><%= @unitplan.informal_assessment %></p>
-<p><b>Key Vocabulary: </b><%= @unitplan.key_vocabulary %></p>
-<p><b>Materials: </b><%= @unitplan.material %></p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teach Together</title>
+  <link rel="stylesheet" type="text/css" href="/print.css">
+</head>
+<body>  
+<div class="print-view">
+    <h1>Unit Title | <%= @unitplan.title %></h1>
+    <div class="basic-info"> 
+      <h3><b>By: </b><%= @unitplan.author %>&nbsp; | &nbsp;</h3>
+      <h3><b>Grade: </b><%= @unitplan.grade %>&nbsp; | &nbsp;</h3>
+      <h3><b>Subject: </b><%= @unitplan.subject %></h3>
+    </div>
+    <div class="start-end-description">
+      <div class="start-end">
+        <h3><b>Start Date: </b><%= @unitplan.start %></h3>
+        <h3><b>End Date: </b><%= @unitplan.ends %></h3>
+      </div>
+      <div class="description">
+        <h3>Description: </h3><p><%= @unitplan.description %></p>
+      </div>
+    </div>
+    <div class="idea-question-standard">
+      <p><b>Big Ideas: </b><%= @unitplan.big_idea %></p>
+      <p><b>Essential Questions: </b><%= @unitplan.essential_question %></p>
+      <p><b>Standards: </b><%= @unitplan.standard %></p>
+    </div>
+    <div class="objectives-assessments">
+      <div class="objectives">
+        <p><b>Objectives (SWBAT): </b><%= @unitplan.swbat %></p>
+      </div>
+      <div class="assessments">
+        <p><b>Formal Assessments: </b><%= @unitplan.formal_assessment %></p>
+        <p><b>Informal Assessments: </b><%= @unitplan.informal_assessment %></p>
+      </div>
+    </div>
+    <p class="vocabulary"><b>Key Vocabulary: </b><%= @unitplan.key_vocabulary %></p>
+    <p class="materials"><b>Materials: </b><%= @unitplan.material %></p>
+  </div>
+</body>
+</html>

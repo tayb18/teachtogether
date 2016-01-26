@@ -2,7 +2,7 @@ class UnitPlansController < ApplicationController
   def index
     @unitplans = UnitPlan.where user_id: session[:user_id]
   end
-   
+    
   def new
     @unitplan = UnitPlan.new
     @userid = session[:user_id]
@@ -25,6 +25,10 @@ class UnitPlansController < ApplicationController
   def print
     @unitplan = UnitPlan.find(params[:id])
     render layout: false
+  end
+
+  def all
+    @unitplans = UnitPlan.all
   end
 
   private 
