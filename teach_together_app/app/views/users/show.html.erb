@@ -14,15 +14,17 @@
     <ul>
       <li>
         <%= network.network_name %> 
-        <% form_for @net_user do |f| %>
-          <% f.hidden_field(:user_id, value: => @user) %>
-          <% f.hidden_field(:network_id, value: => network.id) %>
-
+          <%= form_for @net_user do |f| %>
+          <%= f.hidden_field(:user_id, value: @user.id) %>
+          <%= f.hidden_field(:network_id, value: network.id) %>
+ 
           <%= f.submit('Join Network', class: 'new net-btn') %>
         <% end %>
       </li>
     </ul>
   <% end %>
+
+
 </div>
 
 

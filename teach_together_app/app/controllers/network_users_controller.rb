@@ -2,8 +2,9 @@ class NetworkUsersController < ApplicationController
 
   def create
     @net_user = NetworkUser.create(net_user_params)
+    @network = @net_user.network
 
-    redirect_to @forum
+    redirect_to @network
   end
 
   private
