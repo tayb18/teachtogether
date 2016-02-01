@@ -2,11 +2,11 @@
     <h1><%= @unitplan.title %></h1>
     <h3><b>By: </b><%= @unitplan.author %> &nbsp; | &nbsp; Created <%= time_ago_in_words(@unitplan.created_at) %> ago</h3>
     <div class="up-words">
-        <h5><b>Grade: </b><%= @unitplan.grade %> &nbsp;   &nbsp; </h5>
-        <h5><b>Subject: </b><%= @unitplan.subject %> &nbsp;  &nbsp; </h5>
-        <h5><b>Start Date: </b><%= @unitplan.start %> &nbsp;  &nbsp; </h5>
-        <h5><b>End Date: </b><%= @unitplan.ends %> &nbsp;  &nbsp; </h5>
-        <h5><b>Description: </b><%= @unitplan.description %> &nbsp;  &nbsp; </h5>
+        <h5>Grade: <%= @unitplan.grade %> &nbsp;   &nbsp; </h5>
+        <h5>Subject: <%= @unitplan.subject %> &nbsp;  &nbsp; </h5>
+        <h5>Start Date: <%= @unitplan.start %> &nbsp;  &nbsp; </h5>
+        <h5>End Date: <%= @unitplan.ends %> &nbsp;  &nbsp; </h5>
+        <h5>Description: <%= @unitplan.description %> &nbsp;  &nbsp; </h5>
         <p><b>Big Ideas: </b><%= @unitplan.big_idea %></p>
         <p><b>Essential Questions: </b><%= @unitplan.essential_question %></p>
         <p><b>Standards: </b><%= @unitplan.standard %></p>

@@ -7,26 +7,25 @@ body {
   margin: 0 auto;
   background-image: url('http://cdn.kidsroomidea.info/images/woodflooringideas/dark-wood-floor/rustic-wood-grain-background1746-x-1171-1487-kb-png-x.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: fixed;
   font-family: 'Abel', sans-serif;
   color: #000033;
 } 
 
 ul {
-  list-style:none;
+  list-style: none;
   list-style-type: none;
   text-decoration: none;
 }
 
 li {
-  list-style:none;
+  list-style: none;
   list-style-type: none;
   text-decoration: none;
 }
 
 a {
-  list-style:none;
+  list-style: none;
   list-style-type: none;
   text-decoration: none;
 }
@@ -35,10 +34,12 @@ a {
   margin: 0 auto;
   padding:0px;
   margin-top: 75px;
+  float: left;
+  width: 100%;
 }
 
 #main {
-  min-height: 550px;
+  min-height: 750px;
   max-height: 100%;
   display: inline-block;
   background-color: white;
@@ -46,10 +47,6 @@ a {
   margin-bottom: 0 !important;
   padding-right: 20px;
   padding-left: 20px;
-}
-
-.anyones {
-  margin-top: 10px;
 }
  
 .header {
@@ -59,16 +56,24 @@ a {
   height: 65px;
   padding-top: 0;
   padding-bottom: 10px;
-  padding-left: 17px;
-  padding-right: 19px;
-  width: 75.4%;
+  width: 75%;
   display: inline-block;
-  float: left !important;
   margin-top: 0;
-  margin-left: 0;
-  margin-bottom: 0 !important;
-/*  text-shadow: 2px 2px #c0c0c0;*/
+}
 
+.nav-top {
+  position: fixed;
+  background-color: white;
+  width: 75%;
+  z-index: 9000;
+}
+
+.logo.navtop {
+  float: left;
+}
+
+.nav.nav-top {
+  float: right;
 }
 
 .nav li{
@@ -79,7 +84,7 @@ a {
   padding-left: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 15px;
+  font-size: 20px;
   font-family: 'Abel', sans-serif;
 }
 
@@ -109,7 +114,6 @@ a {
 .nav-right {
   position: absolute; 
   padding: 10px;
-  top: 0; right: 0; 
   height: 430px; 
   width:50px; 
   background: #C3E4ED;
@@ -120,11 +124,12 @@ a {
   margin-right: 100px;
   margin-top: 77px;
   margin-bottom: 10px;
-  width: 105px;
+  width: 174px;
   padding-left: 5px;
   padding-right: 5px;
   min-height: 530px;
   max-height: 100%;
+  right: 58px;
 }
 
 .nav-right li {
@@ -156,20 +161,41 @@ a {
   color:shade(darkslategray, 50%);
   text-decoration: none;
   border-bottom:1px solid transparent; 
+  font-size: 17px;
 }
 
 .browse-units {
   display: inline-block;
   position: relative;
+  margin-left: 20px;
+  margin-top: 20px;
   float: left;
-  width: 350px;
+  width: 450px;
+}
+
+.browse-units h3 {
+  font-size: 25px;
+}
+
+.browse-units p {
+  font-size: 20px;
 }
 
 .browse-lessons {
   display: inline-block;
   position: relative;
+  margin-top: 20px;
   float: left;
-  width: 350px;
+  width: 450px;
+  margin-left: 40px;
+}
+
+.browse-lessons h3 {
+  font-size: 25px;
+}
+
+.browse-lessons p {
+  font-size: 20px;
 }
 
 
@@ -178,7 +204,7 @@ a {
    ===================================== */
 
 .ribbon {
-  font-size: 20px !important;
+  font-size: 25px !important;
  /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
 
   width: 90%;
@@ -261,7 +287,8 @@ a {
   display: inline-block;
   float: left;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 30px;
   padding-top: 30px;
   padding-right: 35px;
   padding-left: 15px;
@@ -286,29 +313,36 @@ a {
 
 .welcome-box-words li {
   list-style-type: none;
+  font-size: 20px;
 }
 
 .pencil {
   display: inline-block;
   position: absolute;
   width: 25%;
-  height: 150px;  
+  height: 200px;  
   margin-bottom: 20px;
+}
+
+#welcome-box-space {
+  margin-right: 10px;
 }
 
 .generator-box {
   position: relative;
+  margin: 0 auto;
   background-color: rgba(221,209,191,.7);
   border-radius: 10px;
   font-size: 15px;
-  width: 85%;
+  width: 80%;
   min-height: 150px;
   max-height: 100%;
   display: inline-block;
   margin: 0 auto;
   margin-top: 40px;
-  margin-left: 5%;
-  margin-bottom: 20px;
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-bottom: 50px;
   color: #000033;
   font-family: 'Abel', sans-serif;
   padding: 10px;
@@ -325,14 +359,29 @@ a {
   text-align: right;
   float: left;
   width: 65%;
-  margin-right: 45px;
+  margin-right: 35px;
   margin-left: 25px;
 }
 
-.generator-logo-link {
+.generator-words h3 {
+  font-size: 23px;
+}
+
+.generator-words p {
+  font-size: 18px;
+}
+
+.generator-logo {
   display: inline-block;
   margin-left: 50px;
+  margin-top: 20px;
   position: absolute;
+}
+
+#welcome-links {
+  margin-left: 23%;
+  margin-right: 23%;
+  margin-bottom: 40px;
 }
 
 .links {
@@ -462,14 +511,13 @@ a {
   text-align: center;
   background-color: rgba(221,209,191,.7);
   border-radius: 10px;
-  font-size: 15px;
+  font-size: 20px;
   width: 65%;
   min-height: 200px;
   max-height: 100%;
   display: inline-block;
-  float: left;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 30px !important;
   padding-top: 10px;
   padding-right: 35px;
   padding-left: 15px;
@@ -485,24 +533,32 @@ a {
 
 .signup-1 {
   margin-bottom: 80px;
+  margin-top: 30px !important;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .signup-form {
   text-align: center;
-  width: 300px;
+  margin: 0 auto;
+  width: 370px;
   position: relative;
-  margin-left: 20%;
+/*  margin-left: 20%;*/
 }
 
 .login-box {
-  margin-top: 0 !important;
+  margin-top: 10px !important;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 230px;
 }
 
 .form-login {
   text-align: center;
   width: 300px;
   position: relative;
-  margin-left: 18%;
+  margin-left: 28%;
+  margin-right: 28%;
 }
 
 input {
@@ -553,7 +609,7 @@ input {
   box-shadow: 1px 1px 3px #9e9b9e;
   font-family: Arial;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 20px;
   padding: 5px 30px 5px 30px;
   border: solid #a3a3c7 1px;
   text-decoration: none;
@@ -588,6 +644,7 @@ input {
 } 
 
 .main-content {
+  display: inline-block;
   background-color: rgba(219,212,180,.5);
   display: inline-block;
   min-height: 550px;
@@ -883,6 +940,11 @@ input {
   position: relative;
 }
 
+.footer-content {
+  margin-left: 16%;
+  margin-right: 16%;
+}
+
 .footer-words {
   display: inline-block;
   position: relative;
@@ -890,6 +952,7 @@ input {
   float: left;
   margin-left: 15%;
   margin-bottom: 0;
+  font-size: 15px;
 }
 
 #email-logo {

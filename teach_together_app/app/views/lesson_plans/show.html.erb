@@ -2,9 +2,9 @@
   <h1><%= @lessonplan.title %></h1>
   <h3><b>By: </b><%= @lessonplan.author %> &nbsp; | &nbsp; Created <%= time_ago_in_words(@lessonplan.created_at) %> ago</h3>
   <div class="up-words">
-    <h5><b>Grade: </b><%= @lessonplan.grade %> &nbsp;   &nbsp;</h5>
-    <h5><b>Subject: </b><%= @lessonplan.subject %> &nbsp;   &nbsp;</h5>
-    <h5><b>Date & Time: </b><%= @lessonplan.date_and_time %> &nbsp;   &nbsp;</h5>
+    <h5>Grade: <%= @lessonplan.grade %> &nbsp;   &nbsp;</h5>
+    <h5>Subject: <%= @lessonplan.subject %> &nbsp;   &nbsp;</h5>
+    <h5>Date & Time: <%= @lessonplan.date_and_time %> &nbsp;   &nbsp;</h5>
     <p><b>Standards: </b><%= @lessonplan.standard %></p>
     <p><b>Objectives (students will be able to): </b><%= @lessonplan.objective %></p>
     <p><b>Essential Questions: </b><%= @lessonplan.essential_question %></p>

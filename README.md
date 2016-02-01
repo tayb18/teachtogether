@@ -36,3 +36,11 @@ Through this app, teachers will be able to form networks where they can collabor
 
 ###### View Page
 ![View Page](/stuff/Teach Together Wireframes/Slide5.jpg)
+
+###### Deploying a subdirectory
+
+reason for this?
+
+```
+git subtree push --prefix teach_together_app heroku master
+```
