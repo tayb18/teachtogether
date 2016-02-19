@@ -1,10 +1,13 @@
 # Teach Together
 
 <a href="url"><img src="https://media.giphy.com/media/eU8DnmsUVINgI/giphy.gif" align="left" height="400" width="400" ></a><br>  
+
+
+https://teachtogether.herokuapp.com/
+
 ###### Teach Together will be a full-stack Ruby on Rails app using a postgres database. The app will allow anyone to create a unit or lesson plan uising the generator.
 ###### Users will be able to log in, save their unit or lesson plans, create networks with other teachers and collaborate on unit plan creation.
 
-https://teachtogether.herokuapp.com/
 
 One of the many short comings in the U.S. education system is that there is no way to ensure congruence in the content that students learn. This creates a disparity of knowledge between students as they move up in grades and are exposed to new classmates and teachers throughout their educational careers. It not only causes great frustration for the students on the lower end of this learning curve, but it also poses a problem to educators who are now faced with the challenge of educating a group of students at such varying levels of learning.
 
